@@ -19,8 +19,8 @@ export default function Navbar() {
     ];
 
     return (
-        <div>
-            <nav className="block w-full max-w-screen px-4 py-4 mx-auto bg-slate-900 text-white font-sans p-4 sm:p-8 sticky top-3 shadow lg:px-8 backdrop-blur-lg backdrop-saturate-150 z-[9999] border-b-white-100 border-b-1">
+        <div className="sticky top-0">
+            <nav className="block w-full max-w-screen px-4 py-4 mx-auto bg-slate-900 text-white font-sans p-4 sm:p-8 shadow lg:px-8 backdrop-blur-lg backdrop-saturate-150 z-[9999] border-b-white-100 border-b-1">
                 <div className="container flex flex-wrap items-center justify-between mx-auto">
                     <div className="lg:hidden">
                         <button
