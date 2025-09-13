@@ -25,11 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar/>
-        {children}
-      </body>
+        <body className={ `${ geistSans.variable } ${ geistMono.variable } antialiased flex-col overflow-hidden h-screen` }>
+            <Navbar/>
+            <div className="min-h-full bg-slate-900 flex-1 overflow-auto text-white font-sans p-4 sm:p-8">
+                { children }
+            </div>
+        </body>
     </html>
-  );
+);
 }

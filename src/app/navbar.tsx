@@ -15,12 +15,13 @@ export default function Navbar() {
     const navItems = [
         { name: "Home", href: "/" },
         { name: "Players", href: "/players" },
+        { name: "The Process", href: "/the-process" },
     ];
 
     return (
         <div>
-            <nav className="block w-full max-w-screen px-4 py-4 mx-auto bg-white bg-opacity-90 sticky top-3 shadow lg:px-8 backdrop-blur-lg backdrop-saturate-150 z-[9999]">
-                <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
+            <nav className="block w-full max-w-screen px-4 py-4 mx-auto bg-slate-900 text-white font-sans p-4 sm:p-8 sticky top-3 shadow lg:px-8 backdrop-blur-lg backdrop-saturate-150 z-[9999] border-b-white-100 border-b-1">
+                <div className="container flex flex-wrap items-center justify-between mx-auto">
                     <div className="lg:hidden">
                         <button
                             className="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -75,7 +76,7 @@ export default function Navbar() {
                             {navItems.map((item, index) => (
                                 <li
                                     key={index}
-                                    className="flex items-center p-1 text-lg gap-x-2 text-slate-600 hover:text-red-500"
+                                    className="flex items-center p-1 text-lg gap-x-2"
                                 >
                                     <Link onClick={() => {setIsMobileMenuOpen(false);}} href={item.href} className="flex items-center">
                                         {item.name}
@@ -91,7 +92,7 @@ export default function Navbar() {
                             {navItems.map((item, index) => (
                                 <li
                                     key={index}
-                                    className="flex items-center p-1 text-lg gap-x-2 text-slate-600 hover:text-red-500"
+                                    className="flex items-center p-1 text-lg gap-x-2"
                                 >
                                     <Link href={item.href} className="flex items-center">
                                         {item.name}
