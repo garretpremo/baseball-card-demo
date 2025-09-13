@@ -1,5 +1,6 @@
 import { Player } from "@/models/player";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 interface PlayerCardProps {
     player: Player;
@@ -47,7 +48,9 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ player, onClose }) => {
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="flex flex-col items-center">
-                    <img
+                    <Image
+                        width={400}
+                        height={400}
                         src={player.image_url}
                         alt={player.name}
                         className="w-48 h-48 rounded-full border-4 border-yellow-400 mb-4 shadow-lg"

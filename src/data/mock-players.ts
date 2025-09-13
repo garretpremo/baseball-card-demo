@@ -6,7 +6,7 @@ export const mockPlayers: Player[] = [
         name: "Alex 'The Cannon' Rodriguez",
         team: "New York Yankees",
         position: "Third Baseman",
-        image_url: "https://placehold.co/400x400/1e293b/f8fafc?text=Player+1",
+        image_url: "/Alex_Rodriguez.jpg",
         stats: {
             batting_average: 0.295,
             home_runs: 696,
@@ -20,7 +20,7 @@ export const mockPlayers: Player[] = [
         name: "Ken 'The Kid' Griffey Jr.",
         team: "Seattle Mariners",
         position: "Center Fielder",
-        image_url: "https://placehold.co/400x400/1e293b/f8fafc?text=Player+2",
+        image_url: "/Ken_Griffey_Jr.jpg",
         stats: {
             batting_average: 0.284,
             home_runs: 630,
@@ -34,7 +34,7 @@ export const mockPlayers: Player[] = [
         name: "Derek 'The Captain' Jeter",
         team: "New York Yankees",
         position: "Shortstop",
-        image_url: "https://placehold.co/400x400/1e293b/f8fafc?text=Player+3",
+        image_url: "/Derek_Jeter.jpg",
         stats: {
             batting_average: 0.310,
             home_runs: 260,
@@ -48,7 +48,7 @@ export const mockPlayers: Player[] = [
         name: "Babe 'The Sultan of Swat' Ruth",
         team: "Boston Red Sox",
         position: "Pitcher / Outfielder",
-        image_url: "https://placehold.co/400x400/1e293b/f8fafc?text=Player+4",
+        image_url: "/Babe_Ruth.jpg",
         stats: {
             batting_average: 0.342,
             home_runs: 714,

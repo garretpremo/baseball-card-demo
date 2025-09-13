@@ -1,9 +1,8 @@
-// @ts-ignore
-
 'use client'
 import { Player } from "@/models/player";
 import { PlayerCard } from "@/app/players/player-card";
 import { useState } from "react";
+import Image from "next/image";
 import { mockPlayers } from "@/data/mock-players";
 
 export default function Page() {
@@ -30,7 +29,9 @@ export default function Page() {
                         onClick={() => setSelectedPlayer(player)}
                         className="group cursor-pointer bg-slate-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-xl transform"
                     >
-                        <img
+                        <Image
+                            width={24}
+                            height={24}
                             src={player.image_url}
                             alt={player.name}
                             className="w-24 h-24 rounded-full border-4 border-slate-700 transition-all duration-300 group-hover:border-yellow-400 group-hover:scale-110"
