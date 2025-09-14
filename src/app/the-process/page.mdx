@@ -1,4 +1,111 @@
-## The Process
+# The Process
+
+## 1. Prompting AI
+
+Used the following JSON prompt in [Google Gemini](gemini.google.com) to generate a wireframe.
+
 ```
-here is some code
+{
+    "task": "write a web application for displaying baseball player statistics",
+    "lookAndFeel": "modern and sleek",
+    "theme": "dark",
+    "animations": "quick",
+    "pages": [
+        {
+            "title": "Players",
+            "content": "A list of players and some basic statistics",
+            "features": [
+                {
+                    "name": "player card",
+                    "type": "overlay",
+                    "specification": "Display a 'baseball card' of the player in the center of the screen when clicking the player in the list. The card should contain an image of the player and a summary of stats",
+                    "animations": "tilt the card towards the mouse when hovering"
+                }
+            ]
+        }
+    ],
+    "codeRequirements": {
+        "framework": "react",
+        "includeRouting": true,
+        "language": "TypeScript",
+        "styles": "scss",
+        "includeTailwind": true
+    }
+}
 ```
+
+Full single file code Output:
+<details>
+    ```
+    put code here
+    ```
+</details>
+
+## 2. Create new Next.js application.
+
+Ran the following script:
+
+```shell
+npx create-next-app@latest
+```
+<details>
+    ![Create Next App](create-next-app.png)
+</details>
+
+## 3. Import Gemini code output
+
+- Copied over pieces of code into appropriate files.
+    - mock data
+        - src/data/mock-players.ts
+    - data models / types
+        - src/models/player.ts
+        - src/models/player-stats.ts
+    - components
+        - src/app/players/page.tsx
+        - src/app/players/player-card.tsx
+
+## 4. Formatting and Layout
+
+- Improved the layout and formatting more to my liking.
+- Added a quick and simple nav bar
+- Not perfect, but good enough for a demo
+
+## 5. Added markdown support, for this page!
+
+### 5.1 Installed mdx
+
+Add mdx support, so markdown could be rendered directly as a next.js page.
+
+Installed the following dependencies:
+
+```
+npm install @next/mdx @mdx-js/loader @mdx-js/react @types/mdx
+```
+
+
+Added appropriate configuration
+
+![MDX Config](mdx-config.png)
+
+---
+
+### 5.2 Added a new page to render the mdx
+
+- src/pages/the-process/page.mdx
+
+---
+
+### 5.3 Noticed that tailwind removed all default styling from the markdown
+
+- Added `@tailwindcss/typography` package to selectively disable tailwind with a `prose` class
+- Added a `layout.tsx` file to wrap the entire markdown page with `<div class="prose">`
+
+### 5.4 More formatting tweaks
+
+- Sticky header
+- Improved layout for a scrolling page
+- Added an `prose-invert` class to have dark mode in the markdown
+
+### 5.5 Wrote this article
+
+Now that the article is done, adding a margin bottom so you can scroll a bit below the bottom.
